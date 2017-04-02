@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <package name="default" extends="struts-default" namespace="/">
+
+        <action name="DeskManager" class="com.scujcc.hotel.struts2.action.BackgroundDinnerTableAction">
+            <result name="success">background-dinnerTable.jsp</result>
+        </action>
+
+        <action name="addDinnerTable" class="com.scujcc.hotel.struts2.action.BackgroundDinnerTableAction" method="addDinnerTable">
+            <result name="success" type="redirectAction">DeskManager</result>
+        </action>
+
+        <action name="delDinnerTable" class="com.scujcc.hotel.struts2.action.BackgroundDinnerTableAction" method="delDinnerTable">
+            <result name="success" type="redirectAction">DeskManager</result>
+        </action>
+
+        <action name="editDinnerTable" class="com.scujcc.hotel.struts2.action.BackgroundDinnerTableAction" method="editDinnerTable">
+            <result name="success" type="redirectAction">DeskManager</result>
+        </action>
+
+        <action name="chageDinnerTable" class="com.scujcc.hotel.struts2.action.BackgroundDinnerTableAction" method="changeDinnerTable">
+            <result name="success" type="redirectAction">DeskManager</result>
+        </action>
+
+
+        <action name="SortManager" class="com.scujcc.hotel.struts2.action.BackgroundCaixiAction">
+            <result name="success">background-caixi.jsp</result>
+        </action>
+
+        <action name="addCaixi" class="com.scujcc.hotel.struts2.action.BackgroundCaixiAction" method="addCaixi">
+            <result name="success" type="redirectAction">SortManager</result>
+        </action>
+
+        <action name="delCaixi" class="com.scujcc.hotel.struts2.action.BackgroundCaixiAction" method="delCaixi">
+            <result name="success" type="redirectAction">SortManager</result>
+        </action>
+
+        <action name="editCaixi" class="com.scujcc.hotel.struts2.action.BackgroundCaixiAction" method="editCaixi">
+            <result name="success" type="redirectAction">SortManager</result>
+        </action>
+
+        <action name="changeCaixi" class="com.scujcc.hotel.struts2.action.BackgroundCaixiAction" method="changeCaixi">
+            <result name="success" type="redirectAction">SortManager</result>
+        </action>
+
+
+        <action name="MenuManager" class="com.scujcc.hotel.struts2.action.BackgroundCaipinAction">
+            <result name="success">background-caipin.jsp</result>
+        </action>
+
+        <action name="addCaipin" class="com.scujcc.hotel.struts2.action.BackgroundCaipinAction" method="addCaipin">
+            <result name="success" type="redirectAction">MenuManager</result>
+        </action>
+
+        <action name="delCaipin" class="com.scujcc.hotel.struts2.action.BackgroundCaipinAction" method="delCaipin">
+            <result name="success" type="redirectAction">MenuManager</result>
+        </action>
+
+        <action name="editCaipin" class="com.scujcc.hotel.struts2.action.BackgroundCaipinAction" method="editCaipin">
+            <result name="success" type="redirectAction">MenuManager</result>
+        </action>
+
+        <action name="changeCaipin" class="com.scujcc.hotel.struts2.action.BackgroundCaipinAction" method="changeCaipin">
+            <result name="success" type="redirectAction">MenuManager</result>
+        </action>
+
+
+        <action name="check" class="com.scujcc.hotel.struts2.action.CheckLoginAction">
+            <result name="success" type="redirectAction">login</result>
+            <result name="input">index.jsp</result>
+        </action>
+
+        <action name="login" class="com.scujcc.hotel.struts2.action.LoginAction">
+            <result name="success" type="dispatcher">hotel.jsp</result>
+            <result name="login" type="dispatcher">index.jsp</result>
+        </action>
+
+        <action name="frontServerOrder" class="com.scujcc.hotel.struts2.action.FrontServerOrderAction">
+            <result name="success" type="dispatcher">frontserver-order.jsp</result>
+        </action>
+    </package>
+</struts>
